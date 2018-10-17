@@ -86,7 +86,6 @@ function result = ddr1b( trace, params, t )
         else
             exercise = exercise - 1;
         end
-        
         physical_ability = trace(t).physical_ability;
         physical = trace(t).physical_ability.arg{2};
         
@@ -172,7 +171,7 @@ function result = ddr1f( trace, params, t )
     result = {};
     
      for exercise = trace(t).exercise
-        sport = trace(t).exercise.arg{2};
+         sport = trace(t).exercise.arg{2};
         agent = trace(t).exercise.arg{1};
         time = trace(t).time_not_exercised.arg{2};
         self_esteem = trace(t).self_esteem;
@@ -229,14 +228,4 @@ function result = ddr1h( trace, params, t )
         result = { result{:} {t+1, 'skin_conductance', {agent, conductance}} };
         
      end
-end
-
-%Analysis belief heart rate
-function result = ddr2a( trace, params, t )
-    result = {};
-    
-     
-               
-        result = { result{:} {t+1, 'skin_conductance', {agent, conductance}} };
-       
 end
