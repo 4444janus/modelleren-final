@@ -1,5 +1,2 @@
-loneliness;                  {AGENT, FEELING}
-reduced_performance;         {AGENT, BOOLEAN}
-alcoholism;                  {AGENT, BOOLEAN}
-cardiovascular_disease;      {AGENT, BOOLEAN}
+
 
