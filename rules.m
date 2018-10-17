@@ -77,8 +77,11 @@ function result = ddr1b( trace, params, t )
         motivation_exercise = trace(t).motivation.arg{2};
         agent = trace(t).motivation.arg{1};
         exercise = trace(t).exercise.arg{2};
+        exercise = 0;
+        display(motivation_exercise);
         
-        if motivation_exercise > params.threshold_exercise
+        
+        if ge(motivation_exercise, 5)
             exercise = exercise + 1;
         else
             exercise = exercise - 1;
