@@ -1,4 +1,4 @@
-weather;                    {REAL}
+weather;                    {BOOLEAN}
 social_environment;         {AGENT, AMOUNT}
 intrinsic_motivation;       {AGENT, BOOLEAN}
 goals;                      {AGENT, AMOUNT}
