@@ -1,0 +1,13 @@
+default (
+loneliness{john, average};          [1:5];
+loneliness{john, very_lonely};      [6:10];
+loneliness{john, not_lonely};      [11:20];
+loneliness{mary, very_lonely};       [1:20];
+alcoholism{john, false};             [1:2];
+alcoholism{mary, false};             [1:2];
+reduced_performance{mary, true};    [1:2];
+reduced_performance{john, false};    [1:2];
+cardiovascular_disease{john, false};[1:2];
+cardiovascular_disease{mary, true};[1:2];
+
+)
