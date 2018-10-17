@@ -1,6 +1,6 @@
 default (
 intrinsic_motivation{john, true};       [1:5];
 goals{john, low};                       [1:5];
-social_environment{john, low};          [1:5];
+social_environment{john, low};           [1:5];
 
 )
