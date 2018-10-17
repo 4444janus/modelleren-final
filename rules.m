@@ -15,12 +15,12 @@ function result = ddr1( trace, params, t )
         
         agent = intrinsic_motivation.arg{1}; %agent name
         
-        motivation = trace(t).motivation
-        %motivatie = trace(t).motivation.arg{2};
-        %motivatie = 0;
+%         motivation = trace(t).motivation
+%         motivatie = trace(t).motivation.arg{2};
+        motivatie = 0;
      
         
-        if isequal(intrinsic,true) 
+        if intrinsic == true
             motivatie = motivatie + 1;
         else
             motivatie = motivatie - 1;
