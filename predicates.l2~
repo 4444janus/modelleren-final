@@ -1,3 +1,7 @@
+loneliness;                  {AGENT, FEELING}
+reduced_performance;         {AGENT, BOOLEAN}
+alcoholism;                  {AGENT, BOOLEAN}
+cardiovascular_disease;      {AGENT, BOOLEAN}
 
 weather;                     {REAL}
 social_environment;          {AGENT, AMOUNT}
@@ -8,7 +12,4 @@ exercise;                    {AGENT, REAL}
 obesity;                     {AGENT, BOOLEAN}
 depression;                  {AGENT, BOOLEAN}
 self_esteem;                 {AGENT, BOOLEAN}
-heart_rate;                  {AGENT, AMOUNT}
-skin_conductance;            {AGENT, AMOUNT}
-physical_ability;            {AGENT, BOOLEAN}
-time_not_exercised;          {AGENT, REAL}
+heart_rate;                  {

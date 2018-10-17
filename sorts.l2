@@ -1,3 +1,2 @@
-AGENT;		{john, mary}
-FEELING;    {very_lonely, average, not_lonely}
-
+AGENT;		{john}
+AMOUNT;    {low, medium, high}
