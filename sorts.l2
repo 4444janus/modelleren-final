@@ -1,3 +1,2 @@
-
-AGENT;		{john}
+AGENT;	   {john}
 AMOUNT;    {low, medium, high}

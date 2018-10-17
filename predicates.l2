@@ -1,14 +1,13 @@
-
-weather;                     {REAL}
-social_environment;          {AGENT, AMOUNT}
-intrinsic_motivation;        {AGENT, BOOLEAN}
-goals;                       {AGENT, AMOUNT}
-motivation;                  {AGENT, REAL}
-exercise;                    {AGENT, REAL}
-obesity;                     {AGENT, BOOLEAN}
-depression;                  {AGENT, BOOLEAN}
-self_esteem;                 {AGENT, BOOLEAN}
-heart_rate;                  {AGENT, AMOUNT}
-skin_conductance;            {AGENT, AMOUNT}
-physical_ability;            {AGENT, BOOLEAN}
-time_not_exercised;          {AGENT, REAL}
+weather;                    {REAL}
+social_environment;         {AGENT, AMOUNT}
+intrinsic_motivation;       {AGENT, BOOLEAN}
+goals;                      {AGENT, AMOUNT}
+motivation;                 {AGENT, REAL}
+exercise;                   {AGENT, REAL}
+obesity;                    {AGENT, BOOLEAN}
+depression;                 {AGENT, BOOLEAN}
+self_esteem;                {AGENT, BOOLEAN}
+heart_rate;                 {AGENT, AMOUNT}
+skin_conductance;           {AGENT, AMOUNT}
+physical_ability;           {AGENT, BOOLEAN}
+time_not_exercised;         {AGENT, REAL}

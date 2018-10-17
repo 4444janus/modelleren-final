@@ -11,17 +11,23 @@ function result = ddr1( trace, params, t )
     result = {};
     
     for intrinsic_motivation = trace(t).intrinsic_motivation
-        motivation = trace(t).motivation.arg{2};
+        intrinsic = trace(t).intrinsic_motivation.arg{2};
+        
+        agent = intrinsic_motivation.arg{1}; %agent name
+        
+        motivation = trace(t).motivation
+        %motivatie = trace(t).motivation.arg{2};
+        %motivatie = 0;
      
         
-        if intrinsic_motivation == true
-            motivation = motivation + 1;
+        if isequal(intrinsic,true) 
+            motivatie = motivatie + 1;
         else
-            motivation = motivation - 1;
+            motivatie = motivatie - 1;
             
         end
-        disp(motivation);
-        result = { result{:} {t+1, 'motivation', {the_agent, motivation}} };
+        disp(motivatie);
+        result = { result{:} {t+1, 'motivation', {agent, motivatie}} };
         
     end
 end
