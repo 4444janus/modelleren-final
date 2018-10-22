@@ -11,3 +11,7 @@ heart_rate;                 {AGENT, AMOUNT}
 skin_conductance;           {AGENT, AMOUNT}
 physical_ability;           {AGENT, BOOLEAN}
 time_not_exercised;         {AGENT, REAL}
+belief_heart_rate;          {AGENT, AMOUNT}
+belief_skin_conductance;    {AGENT, AMOUNT}
+belief_exercise;            {AGENT, BOOLEAN}
+belief_motivation;          {AGENT, BOOLEAN}

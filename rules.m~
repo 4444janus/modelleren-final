@@ -88,7 +88,7 @@ function result = ddr1b( trace, ~, t )
         end
         
 %         physical_ability = trace(t).physical_ability;
-        physical = true;%trace(t).physical_ability.arg{2};
+        physical = true%trace(t).physical_ability.arg{2};
         
         if physical == true
             exercise = exercise + 0;
@@ -274,36 +274,16 @@ function result = ddr2c( trace, ~, t )
     result = {};
     
     for exercise = trace(t).exercise
-        belief_skin_conductance = trace(t).belief_skin_conductance.arg{2};
-        belief_heart_rate = trace(t).belief_heart_rate.arg{2};
+        skin_conductances = trace(t).skin_conductance.arg{2};
         agent = trace(t).heart_rate.arg{1};
      
-        if strcmp(belief_skin_conductance, 'high') && strcmp(belief_heart_rate, 'high')
-            believe_exercise = true;
+        if strcmp(skin_conductances, 'high')
+            believe_skin_conductance = 'high';
         else 
-            believe_exercise = false;
+            believe_skin_conductance = 'low';
               
        
         end
-        result = { result{:} {t+1, 'belief_exercise', {agent, believe_exercise}} };
-    end
-end
-
-% Analysis belief motivation
-function result = ddr2d( trace, ~, t )
-    result = {};
-    
-    for belief_exercise = trace(t).belief_exercise
-        belief_exercises = trace(t).belief_exercise.arg{2};
-        agent = trace(t).heart_rate.arg{1};
-     
-        if belief_exercises == true
-            believe_motivation = true;
-        else 
-            believe_motivation = false;
-              
-       
-        end
-        result = { result{:} {t+1, 'belief_motivation', {agent, believe_motivation}} };
+        result = { result{:} {t+1, 'belief_skin_conductance', {agent, believe_skin_conductance}} };
     end
 end
