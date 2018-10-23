@@ -15,3 +15,7 @@ belief_heart_rate;          {AGENT, AMOUNT}
 belief_skin_conductance;    {AGENT, AMOUNT}
 belief_exercise;            {AGENT, BOOLEAN}
 belief_motivation;          {AGENT, BOOLEAN}
+assessment;                 {AGENT, BOOLEAN}
+desire_goals;               {AGENT, BOOLEAN}
+desire_send_notification;   {AGENT, BOOLEAN}
+proposal_send_notification; {AGENT, BOOLEAN}

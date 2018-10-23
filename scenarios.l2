@@ -16,4 +16,9 @@ skin_conductance{john, low};            [1];
 belief_skin_conductance{john, low};     [1];
 belief_heart_rate{john, low};           [1];
 belief_exercise{john, false};           [1];
+belief_motivation{john, false};         [1];
+desire_goals{john, false};              [1];
+assessment{john, false};                [1];
+desire_send_notification{john, false};  [1];
+proposal_send_notification{john, false};[1];
 )

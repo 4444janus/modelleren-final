@@ -339,54 +339,17 @@ function result = ddr3a( trace, ~, t )
     result = {};
     
     for the_assessment = trace(t).assessment
-        assessment = trace(t).assessment.arg{2};
+        assessment = trace(t).assessment.arg{2}
         agent = trace(t).assessment.arg{1};
+       
         
-        if assessment == true
-            desire_goals = true;
+        if desire_to_be_motivated == true
+            assessment = true;
         else 
-            desire_goals = false;
+            assessment = false;
               
        
         end
-        result = { result{:} {t+1, 'desire_goals', {agent, desire_goals}} };
-    end
-end
-
-%Support desire send notification
-function result = ddr3b( trace, ~, t )
-    result = {};
-    
-    for desire_goals = trace(t).desire_goals
-        desire_for_goals = trace(t).desire_goals.arg{2};
-        agent = trace(t).desire_goals.arg{1};
-        
-        if desire_for_goals == true
-            desire_send_notification = true;
-        else 
-            desire_send_notification = false;
-              
-       
-        end
-        result = { result{:} {t+1, 'desire_send_notification', {agent, desire_send_notification}} };
-    end
-end
-
-%Support proposal send notification
-function result = ddr3c( trace, ~, t )
-    result = {};
-    
-    for desire_send_notification = trace(t).desire_send_notification
-        desire_to_send_notification = trace(t).desire_send_notification.arg{2};
-        agent = trace(t).desire_send_notification.arg{1};
-        
-        if desire_to_send_notification == true
-            proposal_send_notification = true;
-        else 
-            proposal_send_notification = false;
-              
-       
-        end
-        result = { result{:} {t+1, 'proposal_send_notification', {agent, proposal_send_notification}} };
+        result = { result{:} {t+1, 'assessment', {agent, assessment}} };
     end
 end
