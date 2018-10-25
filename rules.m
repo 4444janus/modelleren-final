@@ -87,8 +87,8 @@ function result = ddr1b( trace, ~, t )
             exercise = exercise - 1;
         end
         
-%         physical_ability = trace(t).physical_ability;
-        physical = true;%trace(t).physical_ability.arg{2};
+        physical_ability = trace(t).physical_ability;
+        physical = trace(t).physical_ability.arg{2};
         
         if physical == true
             exercise = exercise + 0;
