@@ -81,7 +81,7 @@ function result = ddr1b( trace, ~, t )
         display(motivation_exercise);
         
         
-        if ge(motivation_exercise, 5)
+        if ge(motivation_exercise, -3)
             exercise = exercise + 1;
         else
             exercise = exercise - 1;
@@ -93,7 +93,7 @@ function result = ddr1b( trace, ~, t )
         if physical == true
             exercise = exercise + 0;
         else
-            exercise = -1; % misschien 0 ipv false?--> sws nooit false, want het is geen boolean toch?
+            exercise = -1; 
         end
         
         result = { result{:} {t+1, 'exercise', {agent, exercise}} };
@@ -390,3 +390,27 @@ function result = ddr3c( trace, ~, t )
         result = { result{:} {t+1, 'proposal_send_notification', {agent, proposal_send_notification}} };
     end
 end
+
+%Support effect support
+% function result = ddr3d( trace, ~, t )
+%     result = {};
+%     
+%     for desire_send_notification = trace(t).desire_send_notification
+%         desire_to_send_notification = trace(t).desire_send_notification.arg{2};
+%         agent = trace(t).desire_send_notification.arg{1};
+%         
+%         goals = trace(t).goals;
+%         goal = trace(t).goals.arg{2};
+%         
+%         if desire_to_send_notification == true && strcmp(goal, 'medium')
+%             goal = 'high';
+%         elseif desire_to_send_notification == true && strcmp(goal, 'low')
+%             goal = 'medium';
+%         else
+%             goal = 'high';
+%               
+%        
+%         end
+%         result = { result{:} {t+1, 'goals', {agent, goal}} };
+%     end
+% end

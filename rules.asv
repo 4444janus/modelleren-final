@@ -87,8 +87,8 @@ function result = ddr1b( trace, ~, t )
             exercise = exercise - 1;
         end
         
-%         physical_ability = trace(t).physical_ability;
-        physical = true%trace(t).physical_ability.arg{2};
+        physical_ability = trace(t).physical_ability;
+        physical = trace(t).physical_ability.arg{2};
         
         if physical == true
             exercise = exercise + 0;
@@ -384,6 +384,28 @@ function result = ddr3c( trace, ~, t )
             proposal_send_notification = true;
         else 
             proposal_send_notification = false;
+              
+       
+        end
+        result = { result{:} {t+1, 'proposal_send_notification', {agent, proposal_send_notification}} };
+    end
+end
+
+%Support effect support
+function result = ddr3d( trace, ~, t )
+    result = {};
+    
+    for desire_send_notification = trace(t).desire_send_notification
+        desire_to_send_notification = trace(t).desire_send_notification.arg{2};
+        agent = trace(t).desire_send_notification.arg{1};
+        
+        goals = trace(t).goals;
+        goal = trace(t).goals.arg{2};
+        
+        if desire_to_send_notification == true && stgoal == 'medium'
+            goal = 'high';
+        elseif desire_to_send_notification == true && goal == 'high'
+            goal = '
               
        
         end
